@@ -113,6 +113,38 @@ body {
   border-radius: 0;
 }
 
+.btn-primary {
+  background-color: #E04242;
+  color: white;
+  border-radius: 0;
+  border-style: none;
+  font-size: 13px;
+  padding: 3px;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-top: 5px;
+}
+
+.btn-primary:hover {
+  background-color: #E04242;
+}
+
+.modal-content {
+  border-style: none;
+  border-radius: 0;
+  width: 600px;
+}
+
+.btn-secondary {
+  left: 0;
+  position: absolute;
+  line-height: 10px;
+}
+
+#modal-warning {
+  padding: 10px;
+}
+
 #side-list {
   background-color: #384B58;
 }
