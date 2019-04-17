@@ -1,6 +1,6 @@
 var map = L.map('map', {
-  center: [42.35560000021253, -71.11200000020439],
-  zoom: 14
+  center: [40.707949, -74.011509],
+  zoom: 11
 });
 
 var Stamen_TonerLite = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
@@ -10,4 +10,3 @@ var Stamen_TonerLite = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{
   maxZoom: 20,
   ext: 'png'
 }).addTo(map);
-
