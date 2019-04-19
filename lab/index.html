@@ -6,51 +6,294 @@
     <!-- CSS Imports -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css" integrity="sha256-iYUgmrapfDGvBrePJPrMWQZDcObdAcStKBpjP3Az+3s=" crossorigin="anonymous" />
     <!-- Place framework CSS code here. -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+<!-- <sidebar> -->
+<nav class="navbar-primary">
+  <a href="#" class="btn-expand-collapse"><span class="glyphicon glyphicon-menu-left"></span></a>
+  <ul class="navbar-primary-menu">
+    <li>
+      <p><i class='fas fa-shopping-basket' style='font-size:48px;color:white;margin-left:65px;margin-top:15px'></i></p>
+      <a href="#"><span class="glyphicon glyphicon-pushpin"></span><i class="fas fa-map-marker-alt" style='font-size:15px;color:white'></i><span class="nav-label" style='margin-left:10px'>Manufacturers</span></a>
+      <a href="#"><span class="glyphicon glyphicon-envelope"></span><i class='fas fa-tag' style='font-size:15px;color:white'></i><span class="nav-label" style="margin-left:10px">Purchases</span></a>
+      <a href="#"><span class="glyphicon glyphicon-cog"></span><i class='fas fa-question-circle' style='font-size:15px;color:white'></i><span class="nav-label" style="margin-left:10px">Basket Secrets</span></a>
+    </li>
+  </ul>
+</nav>
+  
     <!-- Sidebar -->
-    <div class="sidebar">
-      <nav class="navbar navbar-default">
-        <div class="container-fluid clearfix">
-          <div class="topright-button" style="float: right">
-            [Add New]
-          </div>
+  <div class="sidebar">
+
+
+      <nav class="navbar navbar-inverse navbar-global navbar-fixed-top">
+        <div class="container-fluid">
           <div class="navbar-header">
-            <a href="#">Manufacturers</a>
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" color="#4f9ca1">
+              Add New
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">View History</a>
+              <a class="dropdown-item" href="#">Email All Manufacturers</a>
+            </div>
+            <a class="navbar-brand" href="#">Manufacturers</a>
           </div>
+          <!--/.nav-collapse -->
         </div>
       </nav>
-      <div class="item">
-        <h2 class="item-heading">Tandy’s Basketweavers</h2>
-        <div>490 Freedom Drive<br>
-        Philadelphia, PA 19425</div>
-      </div>
-      <div class="item">
-        <h2 class="item-heading">Basket Case</h2>
-        <div>400 S 46th Street<br>
-        Philadelphia, PA 19144</div>
-      </div>
-      <div class="item">
-        <h2 class="item-heading">Bas-kids: Baskets 4 Kids</h2>
-        <div>2558 Walnut Street<br>
-        Philadelphia, PA 19107</div>
-      </div>
-      <div class="item">
-        <h2 class="item-heading">Bask in the Glory</h2>
-        <div>2501 Walnut Street<br>
-        Philadelphia, PA 19107</div>
-      </div>
-      <div class="item">
-        <h2 class="item-heading">Basket Ball</h2>
-        <div>2542 Walnut Street<br>
-        Philadelphia, PA 19107</div>
-      </div>
-      <div class="sort">
-        Sort by <span class="sort-option selected">A–Z</span> <span class="sort-option">Inventory</span>
+
+
+  <div class="main-content">
+  <!-- <h1> I am the main content </h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem sint assumenda quae aliquid voluptatibus quia, ea, ad natus magni repellat earum, culpa iure tempore. Enim dolor eaque minima voluptas ducimus?</p> -->
+
+
+  <!-- <div class="btn-group">
+    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Add New
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">View History</a>
+      <a class="dropdown-item" href="#">Email All Manufacturers</a>
+    </div>
+  </div> -->
+
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+
+  <div class="item">
+    <h2 class="item-heading">Tandy’s Basketweavers</h2>
+    <div>490 Freedom Drive<br>
+    Philadelphia, PA 19425</div>
+    <!-- <div class="inventory">Low Inventory</div> -->
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+      Low Inventory
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Manufacturer</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-header">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="mobile-bottom-bar">
+                        <h5 style="font-size:12px;color:white"> This Manufacturer has low inventory.</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-sm-6">
+                  <h5><b>Tandy's Basketweavers</b></h5>
+                </div>
+                <div class="col-sm-6">
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-outline-dark">Edit</button>
+                    <button type="button" class="btn btn-outline-dark">Delete</button>
+                    <button type="button" class="btn btn-outline-dark">Export</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-header">
+             <div class="container">
+               <div class="row">
+                 <div class="col-4">
+                   <h6 class="modal-title2"><b>Address</b></h6>
+                   <br>
+                   <p style='font-size:12px'>490 Freedom Drive</p>
+                   <p style='font-size:12px'>Philadelphia, PA 19425</p>
+                 </div>
+                 <div class="col-4">
+                   <h6 class="modal-title2"><b>Contact</b></h6>
+                   <br>
+                   <p style='font-size:12px'>Dave Javies</p>
+                   <p style='font-size:12px'>Senior Weaver</p>
+                 </div>
+                 <div class="col-4">
+                   <p style='font-size:50px; Color:#80aaff; margin-bottom:10px'>324</p>
+                   <p style='font-size:12px'>Baskets sold in past 7 days</p>
+                 </div>
+               </div>
+             </div>
+           </div>
+            <div class="modal-body">
+              <h5><b>Sales</b></h5>
+          <br>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="head">First Name</div>
+              </div>
+              <div class="col">
+                <div class="head">Last Name</div>
+              </div>
+              <div class="col">
+                <div class="head">Purchase</div>
+              </div>
+              <div class="w-100"></div>
+              <div class="col">Mark</div>
+              <div class="col">Otto</div>
+              <div class="col">Fruit Basket</div>
+              <div class="w-100"></div>
+              <div class="col">Jacob</div>
+              <div class="col">Thornton</div>
+              <div class="col">Gift Basket</div>
+              <div class="w-100"></div>
+              <div class="col">Larry</div>
+              <div class="col">Bird</div>
+              <div class="col">Easter Basket</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+</div>
+
+
+  <div class="item">
+    <h2 class="item-heading">Basket Case</h2>
+    <div>400 S 46th Street<br>
+    Philadelphia, PA 19144</div>
+  </div>
+  <div class="item">
+    <h2 class="item-heading">Bas-kids: Baskets 4 Kids</h2>
+    <div>2558 Walnut Street<br>
+    Philadelphia, PA 19107</div>
+  </div>
+  <div class="item">
+    <h2 class="item-heading">Bask in the Glory</h2>
+    <div>2501 Walnut Street<br>
+    Philadelphia, PA 19107</div>
+  </div>
+  <div class="item">
+    <h2 class="item-heading">Basket Ball</h2>
+    <div>2542 Walnut Street<br>
+    Philadelphia, PA 19107</div>
+  </div>
+  <div class="sort">
+    Sort by <span class="sort-option selected">A–Z</span> <span class="sort-option">Inventory</span>
+  </div>
+
+  </div>
+
+
+
+  </div>
+
+
+    <!-- <div class="sidebar"> -->
+      <!-- <button class="btn btn-primary">IM A BUTTON </button> -->
+      <!-- 其实默认了一些格式，但是可以在css里另外改 -->
+
+        <!-- Example single danger button -->
+  <!-- <div class="btn-group">
+    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Action
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </div> -->
+
+      <!-- Carousel -->
+      <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTExV61bY8igogxyOXR6eyv4SgAYLsE_ytiODeanoozRFmhWMlb" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div> -->
+
+
+      <!-- Button trigger modal -->
+      <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+      </button> -->
+
+      <!-- Modal -->
+      <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body"> -->
+              <!-- 添加一个form到modal里 -->
+              <!-- <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form> -->
+
+            <!-- </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> -->
+    <!-- <div class="sidebar"> -->
+
+    <!-- </div> -->
+
     <!-- Map -->
     <div id="map" class="map"></div>
     <!-- Javascript Imports -->
@@ -58,6 +301,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js" integrity="sha256-obZACiHd7gkOk9iIL/pimWMTJ4W/pBsKu+oZnSeBIek=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js" integrity="sha256-CNm+7c26DTTCGRQkM9vp7aP85kHFMqs9MhPEuytF+fQ=" crossorigin="anonymous"></script>
     <!-- Place framework JS code here. -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
     <script src="js/setup.js"></script>
   </body>
 </html>
