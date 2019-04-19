@@ -8,25 +8,138 @@
     <!-- Place framework CSS code here. -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   </head>
   <body>
     <!-- Sidebar -->
     <div class="sidebar">
+
       <nav class="navbar navbar-default">
         <div class="container-fluid clearfix">
-          <div class="topright-button" style="float: right">
-            [Add New]
-          </div>
-          <div class="navbar-header">
-            <a href="#">Manufacturers</a>
-          </div>
+          <h2 class="item-heading">Manufacturers</h2>
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Add New
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+              <button class="dropdown-item" type="button">View History</button>
+              <button class="dropdown-item" type="button">Email all Manufacturers</button>
+            </div>
+          </div>    
         </div>
+
+
+
+
       </nav>
+      <nav class="navbar navbar-light bg-light">
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </nav>
+
       <div class="item">
         <h2 class="item-heading">Tandy’s Basketweavers</h2>
         <div>490 Freedom Drive<br>
         Philadelphia, PA 19425</div>
+        <!-- Button trigger modal -->
+  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">
+    Low Inventory
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Manufacturers</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
+      <div class="modal-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="mobile-bottom-bar">
+                <h5 margin='auto' width='50%' height='50%'; style='font-size:3px; color:white'>This manufacturer has low inventory.</h5>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-sm-6">
+              <h6>Tandy's Basketweavers</h6>
+            </div>
+            <div class="col-sm-6">
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-dark">Edit</button>
+                <button type="button" class="btn btn-outline-dark">Delete</button>
+                <button type="button" class="btn btn-outline-dark">Export</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <h6 class="modal-title2">Address</h6>
+              <br>
+              <p style='font-size:3px'>490 Freedom Drive</p>
+              <p style='font-size:3px'>Philadelphia, PA 19425</p>
+            </div>
+            <div class="col-4">
+              <h6 class="modal-title2">Contact</h6>
+              <br>
+              <p style='font-size:3px'>Dave Javies</p>
+              <p style='font-size:3px'>Senior Weaver</p>
+            </div>
+            <div class="col-4">
+              <p style='font-size:50px; Color:#80aaff; margin-bottom:10px'>324</p>
+              <p style='font-size:3px'>Baskets sold in past 7 days</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <h5>Sales</h5>
+        <br>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="head">First Name</div>
+            </div>
+            <div class="col">
+              <div class="head">Last Name</div>
+            </div>
+            <div class="col">
+              <div class="head">Purchase</div>
+            </div>
+            <div class="w-100"></div>
+            <div class="col">Mark</div>
+            <div class="col">Otto</div>
+            <div class="col">Fruit Basket</div>
+            <div class="w-100"></div>
+            <div class="col">Jacob</div>
+            <div class="col">Thornton</div>
+            <div class="col">Gift Basket</div>
+            <div class="w-100"></div>
+            <div class="col">Larry</div>
+            <div class="col">Bird</div>
+            <div class="col">Easter Basket</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
       <div class="item">
         <h2 class="item-heading">Basket Case</h2>
         <div>400 S 46th Street<br>
@@ -51,6 +164,31 @@
         Sort by <span class="sort-option selected">A–Z</span> <span class="sort-option">Inventory</span>
       </div>
     </div>
+
+
+<!-- Nav Bar -->
+<nav class="navbar-primary">
+  <a href="#" class="btn-expand-collapse"><span class="glyphicon glyphicon-menu-left"></span></a>
+
+  <span>Sub1</span>
+    <span style='position:absolute; left:55%; top:1%'>
+      <span style='border:1px; color:#ccc; margin-left:-100%; font-size: 2em'>
+        <i class="fas fa-shopping-bag"></i>
+      </span>
+    </span>
+  </span>
+
+  <ul class="navbar-primary-menu">
+    <li>
+      <a href="#"><span class="fas fa-map-marker-alt"></span><span class="nav-label"><span class="ml-3">Manufacturers</span></a>
+      <a href="#"><span class="fas fa-tag"></span><span class="nav-label"><span class="ml-3">Purchases</span></a>
+      <a href="#"><span class="fas fa-exclamation-triangle"></span><span class="nav-label"><span class="ml-3">Basket Secrets</span></a>
+    </li>
+  </ul>
+</nav>
+
+
+
     <!-- Map -->
     <div id="map" class="map"></div>
     <!-- Javascript Imports -->
@@ -58,6 +196,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js" integrity="sha256-obZACiHd7gkOk9iIL/pimWMTJ4W/pBsKu+oZnSeBIek=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js" integrity="sha256-CNm+7c26DTTCGRQkM9vp7aP85kHFMqs9MhPEuytF+fQ=" crossorigin="anonymous"></script>
     <!-- Place framework JS code here. -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="js/setup.js"></script>
   </body>
 </html>
