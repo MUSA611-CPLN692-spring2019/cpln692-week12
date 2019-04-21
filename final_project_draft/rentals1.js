@@ -111,32 +111,6 @@ map.on('load', function() {
 //github viol geojeson
 //https://github.com/angelicakim28/PhillyRentals/blob/master/violations_sample.geojson
 
-//presentation notes:
-
-//past violation tell a lot about possible future Risk
-//range slider for relative risk scores;
-//plot visualizations of comparison of model results (for markdown//results table maybe in appendix)
-//rates of confusion matrices
-//tabular for cost benefits
-//choice of presentation selection (7 blocks/neighborhood/etc)
-//  'model predicts well in areas that are x'
-//  'model is generalizable across space?'
-//
-//moran's i?
-//spatial cross validation/leave one out neighborhood
-//
-// x show actual and predicted map overlay; neightborhood aggregates as rates
-// talk about things in the context of the total Data
-//    differentiate between full and sample
-// number of properties that must be inspected by law
-// 'given a fixed amount of resources...'
-//
-//2k-4/5k?
-//districts 22 // neighborhoods 155.
-//feature selection; story selection; ...
-//sens/spec -> true/pos/fals/neg -> costs
-
-
 
     // inspect a unit (unclustered-point) on click
     // When a click event occurs on a feature in the unclustered-point layer, open a popup at the
